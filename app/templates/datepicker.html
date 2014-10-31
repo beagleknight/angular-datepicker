@@ -3,9 +3,9 @@
     <table>
       <thead>
       <tr>
-        <th ng-click="prev()">‹</th>
+        <th ng-click="prev()"><i class="fa fa-chevron-left"></i></th>
         <th colspan="5" class="switch" ng-click="setView('month')">{{date|date:"yyyy MMMM"}}</th>
-        <th ng-click="next()">›</i></th>
+        <th ng-click="next()"><i class="fa fa-chevron-right"></i></th>
       </tr>
       <tr>
         <th ng-repeat="day in weekdays" style="overflow: hidden">{{ day|date:"EEE" }}</th>
@@ -27,7 +27,7 @@
     <table>
       <thead>
       <tr>
-        <th ng-click="prev(10)">‹</th>
+        <th ng-click="prev(10)"></th>
         <th colspan="5" class="switch">{{years[0].getFullYear()}}-{{years[years.length-1].getFullYear()}}</th>
         <th ng-click="next(10)">›</i></th>
       </tr>
@@ -47,9 +47,9 @@
     <table>
       <thead>
       <tr>
-        <th ng-click="prev()">‹</th>
+        <th ng-click="prev()"><i class="fa fa-chevron-left"></i></th>
         <th colspan="5" class="switch" ng-click="setView('year')">{{ date|date:"yyyy" }}</th>
-        <th ng-click="next()">›</i></th>
+        <th ng-click="next()"><i class="fa fa-chevron-right"></i></th>
       </tr>
       </thead>
       <tbody>
@@ -65,12 +65,12 @@
     </table>
   </div>
   <div ng-switch-when="hours">
-    <table>
+    <table class="hours">
       <thead>
       <tr>
-        <th ng-click="prev(24)">‹</th>
+        <th ng-click="prev(24)"><i class="fa fa-chevron-left"></i></th>
         <th colspan="5" class="switch" ng-click="setView('date')">{{ date|date:"dd MMMM yyyy" }}</th>
-        <th ng-click="next(24)">›</i></th>
+        <th ng-click="next(24)"><i class="fa fa-chevron-right"></i></th>
       </tr>
       </thead>
       <tbody>
@@ -85,13 +85,13 @@
     </table>
   </div>
   <div ng-switch-when="minutes">
-    <table>
+    <table class="minutes">
       <thead>
       <tr>
-        <th ng-click="prev()">‹</th>
+        <th ng-click="prev()"><i class="fa fa-chevron-left"></i></th>
         <th colspan="5" class="switch" ng-click="setView('hours')">{{ date|date:"dd MMMM yyyy" }}
         </th>
-        <th ng-click="next()">›</i></th>
+        <th ng-click="next()"><i class="fa fa-chevron-right"></i></th>
       </tr>
       </thead>
       <tbody>
