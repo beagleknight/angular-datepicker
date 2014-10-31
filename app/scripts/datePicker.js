@@ -34,7 +34,9 @@ Module.directive('datePicker', ['datePickerConfig', 'datePickerUtils', function 
     scope: {
       model: '=datePicker',
       after: '=?',
-      before: '=?'
+      before: '=?',
+      dateLimitMin: '=',
+      dateLimitMax: '='
     },
     link: function (scope, element, attrs) {
 
@@ -206,6 +208,13 @@ Module.directive('datePicker', ['datePickerConfig', 'datePickerUtils', function 
           is &= date.getFullYear() === now.getFullYear();
         }
         return is;
+      };
+
+      scope.isAvailable = function (date) {
+        var minLimit = !scope.dateLimitMin || datePickerUtils.isAfter(scope.dateLimitMin, date),
+            maxLimit = !scope.dateLimitMax || datePickerUtils.isBefore(scope.dateLimitMax, date);
+
+        return minLimit && maxLimit;
       };
     }
   };

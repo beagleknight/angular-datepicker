@@ -15,6 +15,8 @@ Module.constant('dateTimeConfig', {
         (attrs.template ? 'template="' + attrs.template + '" ' : '') +
         (attrs.minView ? 'min-view="' + attrs.minView + '" ' : '') +
         (attrs.partial ? 'partial="' + attrs.partial + '" ' : '') +
+        (attrs.dateLimitMin ? 'date-limit-min="' + attrs.dateLimitMin + '" ' : '') +
+        (attrs.dateLimitMax ? 'date-limit-max="' + attrs.dateLimitMax + '" ' : '') +
         'class="dropdown-menu"></div>';
   },
   format: 'yyyy-MM-dd HH:mm',
